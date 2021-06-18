@@ -82,7 +82,7 @@ class ShuffleMNIST():
         if not type(self.wall_shape) == int:
             raise TypeError('Wall_shape must be integrer')
 
-        if not self.wall_shape <= 0:
+        if self.wall_shape <= 0:
             raise ValueError('Wall_shape is positive')
 
         if not type(self.sum) == bool:
