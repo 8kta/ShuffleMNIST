@@ -2,7 +2,7 @@ import numpy as np
 import os
 
 import torch
-from RandomAnchors import RandomAnchors
+from ShuffleMNIST import RandomAnchors
 
 import torchvision
 from torchvision.utils import save_image
@@ -116,7 +116,7 @@ class ShuffleMNIST():
 
                 #se hacen las esquinas aleatorias y se definen como anclas
                 if len(self.anchors) == 0:
-                    random = RandomAnchors(self.num, self.radius)
+                    random = RandomAnchors.RandomAnchors(self.num, self.radius)
                     anchors = random.random_img()
                 else:
                     anchors = self.anchors
