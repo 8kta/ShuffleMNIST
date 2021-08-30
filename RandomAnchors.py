@@ -1,5 +1,5 @@
 import torch
-from Sphere import Sphere
+from ShuffleMNIST import Sphere
 
 class RandomAnchors():
     '''
@@ -32,9 +32,9 @@ class RandomAnchors():
         while len(self.anchors) < self.num:
           rand = torch.randint(84, size=(1, 2)).reshape(-1)
           #print(type(rand[0].item()))
-          sph_rand = Sphere(rand, self.radius)
+          sph_rand = Sphere.Sphere(rand, self.radius)
           center = sph_rand.center()
-          sph_center = Sphere(center,self.radius)
+          sph_center = Sphere.Sphere(center,self.radius)
           if len(self.anchors) == 0:
             self.anchors.append(rand)
             self.sph_centers.append(sph_center)
