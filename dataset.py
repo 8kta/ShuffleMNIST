@@ -1,15 +1,9 @@
 import numpy as np
-import os
 
 import torch
 from ShuffleMNIST import RandomAnchors
 
-import torchvision
-from torchvision.utils import save_image
-from torchvision import transforms
 
-from PIL import Image
-#
 
 #clase parent cub con tres parámetros, dos dados.
 class ShuffleMNIST():
